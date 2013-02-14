@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.shadowburst</groupId>
-	<artifactId>util</artifactId>
+	<artifactId>shadowburst-util</artifactId>
 	<version>1</version>
 	<packaging>jar</packaging>
 
-	<name>util</name>
-	<url>http://maven.apache.org</url>
+	<name>shadowburst-util</name>
+        <url>http://shadowburst.com</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
