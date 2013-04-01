@@ -1,15 +1,14 @@
 package com.shadowburst.util;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import java.util.Collections;
-import java.util.List;
-import org.junit.rules.ExpectedException;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
+
+import java.util.Collections;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 @RunWith(org.junit.runners.JUnit4.class)
 public class WeakListTest {
@@ -18,8 +17,8 @@ public class WeakListTest {
 
     @Test
     public void constructors() {
-        WeakList<Object> def = new WeakList<Object>();
-        WeakList<Object> four = new WeakList<Object>(4);
+        final WeakList<Object> def = new WeakList<Object>();
+        final WeakList<Object> four = new WeakList<Object>(4);
         assertTrue(def.isEmpty());
         assertTrue(four.isEmpty());
         assertEquals(0, def.size());
@@ -36,7 +35,7 @@ public class WeakListTest {
     @Test
     public void singleton() {
         WeakList<Integer> is = new WeakList<Integer>(1);
-        Integer i = new Integer(3);
+        final Integer i = 3;
         is.add(i);
         assertFalse(is.isEmpty());
         assertTrue(is.contains(i));
@@ -54,8 +53,7 @@ public class WeakListTest {
 
     @Test
     public void setNull() throws NullPointerException {
-        WeakList<Integer> is = new WeakList<Integer>(1);
-        Integer i = new Integer(3);
+        final WeakList<Integer> is = new WeakList<Integer>(1);
 
         thrown.expect(NullPointerException.class);
         is.set(0, null);
